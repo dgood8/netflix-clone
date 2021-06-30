@@ -34,18 +34,19 @@ function Row({ title , fetchUrl, isLargeRow}) {
     };
 
     //handle when a movie is clicked on
-    // This still doesn't work the url is not being gotten right
+    // This doesn't work with all titles due to movie trailer package not being able to find right url
 
 
     const handleClick = (movie) => {
+        console.log(movie);
+        console.log(movie.title || movie.name);
         if(trailerUrl){
             setTrailerUrl("");
         }else{
-            movieTrailer(movie?.name || "")
+            movieTrailer(movie?.title || movie?.name || "")
                 .then((url) =>{
                    const urlParams = new URLSearchParams(new URL(url).search);
                    setTrailerUrl(urlParams.get("v"));
-                   console.log(url);
                 })
             .catch((error)=> console.log(error))
         }
