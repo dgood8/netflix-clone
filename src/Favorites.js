@@ -84,7 +84,6 @@ function Favorites({ title }) {
                         src={`${base_url}${movie.movie.backdrop_path}`}
                         alt={movie.movie.name}
                         />
-                        {console.log(movie)}
                     </div>
                 ))}
                 

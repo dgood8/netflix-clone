@@ -17,16 +17,15 @@
 
 .movieControls {
   position: relative;
-
+  margin-left: 15px;
   width: 100%;
-
   margin-right: 10px;
 }
 
 .row_poster {
   object-fit: contain;
   position: relative;
-  left: 20px;
+  left: 30px;
   max-height: 100px;
   margin-right: 10px;
   transition: transform 450ms;
@@ -74,8 +73,17 @@
   position: absolute;
   left: 0;
 }
+
+.favoritesButton:hover {
+  background-color: #e50914;
+  border-radius: 50%;
+}
 .infoButton {
   position: absolute;
   left: 0rem;
-  top: 20px;
+  top: 25px;
+}
+.infoButton:hover {
+  background-color: #808080;
+  border-radius: 50%;
 }
