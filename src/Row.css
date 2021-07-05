@@ -1,4 +1,5 @@
 .row {
+  position: relative;
   color: white;
   margin-left: 20px;
 }
@@ -14,22 +15,67 @@
   display: none;
 }
 
+.movieControls {
+  position: relative;
+
+  width: 100%;
+
+  margin-right: 10px;
+}
+
 .row_poster {
   object-fit: contain;
-  width: 100%;
+  position: relative;
+  left: 20px;
   max-height: 100px;
   margin-right: 10px;
   transition: transform 450ms;
 }
 
 .row_poster:hover {
-  transform: scale(1.09);
+  transform: scale(1.08);
 }
 
 .row_posterLarger {
   max-height: 250px;
 }
 
-.row_poster:hover {
-  transform: scale(1.1);
+.row_posterLarger:hover {
+  transform: scale(1.09);
+}
+
+.row_left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: black;
+  border-radius: 50%;
+  opacity: 10%;
+  transition: transform 450ms;
+}
+
+.row_left:hover {
+  opacity: 100%;
+}
+
+.row_right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: black;
+  border-radius: 50%;
+  opacity: 10%;
+}
+.row_right:hover {
+  opacity: 100%;
+}
+
+.favoritesButton {
+  position: absolute;
+  left: 0;
+}
+.infoButton {
+  position: absolute;
+  left: 0rem;
+  top: 20px;
 }
